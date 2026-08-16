@@ -1,0 +1,23 @@
+{
+  "name": "ci-cd-labs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node --check app/calculator.js",
+    "test": "jest --ci --coverage --reporters=default --reporters=jest-junit"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.js"],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["app/**/*.js"]
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "junit.xml"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
+  }
+}
