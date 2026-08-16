@@ -34,8 +34,5 @@ jobs:
       - name: Mostrar versión de Git
         run: git --version
 
-      - name: Simular fallo del laboratorio
-        run: exit 1
-
       - name: Finalizar pipeline
         run: echo "Pipeline ejecutado correctamente."
